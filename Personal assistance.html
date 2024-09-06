@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale=1.0">
+        <title>Personal Assistance </title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+<body>
+
+    <!--onclick="location.href=''"-->
+
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                   <img src="Logo.png" width="125px"></a>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="Home.html">Home</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <h1>Your needs <br> in one platform</h1>
+                    <p>You think and we provide</p>
+                    <div class="btn">Explore Now &#8595;</div>
+                </div>
+                <div class="col-2">
+                    <img src="logo for upgrade.PNG">
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="small-container">
+
+    <div class="row row-2">
+        <h2>Level Up</h2>
+        <div class="page-btn">
+            <span onclick="location.href='file:///C:/Users/Sofia/Downloads/website/OFFICIAL/Level%20Up.html'" >1</span>
+            <span onclick="location.href='file:///C:/Users/Sofia/Downloads/website/OFFICIAL/workoutsmen.html'" >2</span>
+            <span onclick="location.href='file:///C:/Users/Sofia/Downloads/website/OFFICIAL/healthyfood.html'">3</span>
+            <span onclick="location.href='file:///C:/Users/Sofia/Downloads/website/OFFICIAL/Education.html'">4</span>
+            <span onclick="location.href='file:///C:/Users/Sofia/Downloads/website/OFFICIAL/Motivation.html'">5</span>
+            <span onclick="location.href='file:///C:/Users/Sofia/Downloads/website/OFFICIAL/Apps.html'">6</span>
+            <span class="bit">7</span>
+        </div>
+        <select>
+            <option>Personal assistance</option>
+        </select>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <img src="p1.PNG">
+            <h4> <br>Let's Chat Through Instagram!</h4>
+            <p onclick="location.href='file:///C:/Users/Sofia/Downloads/website/OFFICIAL/productdetails.html'">Click Here For More</p>
+        </div>
+        <div class="col-4">
+            <img src="p2.PNG">
+            <h4> <br>Let's Chat Through X!</h4>
+            <p onclick="location.href='file:///C:/Users/Sofia/Downloads/website/OFFICIAL/x.html'" >Click Here For More</p>
+        </div>
+    </div>
+    
+
+<!--footer-->
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+
+            <!--
+            <div class="footer-col-1">
+                <h3>Download our App</h3>
+                <p>Download App for Android and ios mobile phone.</p>
+                <div class="app-logo">
+                    <img src="logoofapptochange.PNG">
+                    <img src="logoofapptochange.PNG">
+                </div>
+            </div>
+            -->
+
+            <div class="footer-col-2">
+                <img src="Logo.png">
+                <p>Officialix</p>
+            </div>
+            <div class="footer-col-4">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li onclick="location.href='file:///C:/Users/Sofia/Downloads/website/OFFICIAL/Coupons.html'">Coupons</li>
+                    <li onclick="location.href='file:///C:/Users/Sofia/Downloads/website/OFFICIAL/return%20policy.html'">Return Policy</li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow me</h3>
+                <ul>
+                    <li onclick="location.href='https://www.tiktok.com/@theknownfairy'">TikTok</li>
+                    <li onclick="location.href='https://x.com/Theknownfairy'">X</li>
+                    <li onclick="location.href='https://www.instagram.com/theknownfairy/'">Instagram</li>
+                    <li onclick="location.href='https://www.youtube.com/@Theknownfairy'">YouTube</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright 2024 - Officialix</p>
+    </div>
+</div>
+<!--js for toggle menu-->
+
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle(){
+        if (MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px"
+        }
+        else
+        {
+            MenuItems.style.maxHeight = "0px"
+        }
+    }
+</script>
+
+<script src="scripa.js"></script>
+</body>
+</html>
