@@ -1,0 +1,157 @@
+<html>
+<head>
+    <title> Officialix </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img src="Logo.png" width="125px"></a>
+    </div>
+    <nav class="navigation">
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+       <button class="btnLogin-popup" >Login</button>
+    </nav>
+</header>
+
+<div class="wrapper">
+    <span class="icon-close"><i class="fa fa-times"></i></span>
+    <div class="form-box login">
+        <h2>Login Here</h2>
+        <form onsubmit="loginUser(event)" >
+            <div class="input-box">
+                <i class="fa fa-user"></i>
+                <input type="text"  id="username" required >
+                <label>Username</label>
+            </div>
+            <div class="input-box">
+                <i class="fa fa-key"></i> <span class="eye" onclick="togglePassword()"><i id="hide1"class="fa fa-eye"></i><i id="hide2" class="fa fa-eye-slash"></i></span>
+                <input type="password"   required  id="password">
+                <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox" id="checkbox1">Submit</label>
+                <h5> <em>Do not forget your password <br>
+                or you will have to create a new <br>
+                account </em></h5>
+            </div>
+            <button type="submit"; class="btn" id="button1"   >Login</button>
+            <div class="login-register">
+                <p>Don't have an account? <a href="#" class="register-link">Register</a> </p>
+            </div>
+        </form>
+    </div>
+
+
+
+    <div class="form-box register">
+        <h2>Registration</h2>
+        <form onsubmit="registerUser(event);">
+        
+            <div class="input-box">
+                <i class="fa fa-envelope"></i>
+                <input type="email" id="registerEmail" required>
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <i class="fa fa-user"></i>
+                <input type="text" id="registerUsername" required >
+                <label>Username</label>
+            </div>
+            <div class="input-box">
+                <i class="fa fa-key"></i> 
+                <input type="password" id="registerPassword" required  >
+                <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox" id="checkbox2">I agree to the terms & condicions</label>
+            </div>
+            <button type="submit"; class="btn" id="button2"  >Register</button>
+            <div class="login-register">
+                <p>Already have an account? <a href="#" class="login-link">Login Here</a> </p>
+            </div>
+        
+        </form>
+    </div>
+</div> 
+
+
+<script>
+    function togglePassword() {
+        var x = document.getElementById("password");
+        var y = document.getElementById("hide1");
+        var z = document.getElementById("hide2");
+
+        if (x.type === 'password') {
+            x.type = 'text';
+            y.style.display = 'block';
+            z.style.display = 'none';
+        } else {
+            x.type = 'password';
+            y.style.display = 'none';
+            z.style.display = 'block';
+        }
+    }
+
+    function loginUser(event) {
+        event.preventDefault();
+
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const checkbox = document.getElementById('checkbox1');
+
+        if (!username || !password) {
+            alert('Please fill in all fields.');
+            return;
+        }
+
+        if (!checkbox.checked) {
+            alert('Please agree to the terms by checking the checkbox.');
+            return;
+        }
+
+        const storedUser = JSON.parse(localStorage.getItem(username));
+
+        if (storedUser && storedUser.password === password) {
+            alert('Login successful!');
+            window.location.href = 'Home.html'; // Update this path as needed
+        } else {
+            alert('Invalid username or password.');
+        }
+    }
+
+    function registerUser(event) {
+        event.preventDefault();
+
+        const email = document.getElementById('registerEmail').value;
+        const username = document.getElementById('registerUsername').value;
+        const password = document.getElementById('registerPassword').value;
+        const checkbox = document.getElementById('checkbox2');
+
+        if (!email || !username || !password) {
+            alert('Please fill in all fields.');
+            return;
+        }
+
+        if (!checkbox.checked) {
+            alert('Please agree to the terms by checking the checkbox.');
+            return;
+        }
+
+        const userData = {
+            email: email,
+            password: password
+        };
+
+        localStorage.setItem(username, JSON.stringify(userData));
+        alert('Registration successful!');
+        window.location.href = 'Home.html'; // Update this path as needed
+    }
+
+
+</script>
+<script src="script.js"></script>
+</body>
+</html>
