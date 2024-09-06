@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Calendar</title>
+    <link rel="stylesheet" href="stylesda.css">
+</head>
+<body>
+    <header>
+        <h1>Create a Community and Manage Calendar</h1>
+    </header>
+    
+    <div id="community-section">
+        <h2>Create a New Community</h2>
+        <form id="community-form">
+            <label for="community-name">Community Name:</label>
+            <input type="text" id="community-name" required>
+            <button type="submit">Create Community</button>
+        </form>
+
+        <h2>Add Members to Community</h2>
+        <form id="add-member-form">
+            <label for="member-username">Username:</label>
+            <input type="text" id="member-username" required>
+            <button type="submit">Add Member</button>
+        </form>
+
+        <h3>Community Members:</h3>
+        <ul id="member-list"></ul>
+    </div>
+    
+    <div id="calendar-section">
+        <h2>Community Calendar</h2>
+        <div id="calendar"></div>
+        <form id="event-form">
+            <h3>Add Event (Only for Community Admin)</h3>
+            <label for="event-title">Event Title:</label>
+            <input type="text" id="event-title" required>
+            <label for="event-date">Date:</label>
+            <input type="date" id="event-date" required>
+            <button type="submit">Add Event</button>
+        </form>
+    </div>
+
+    <script src="community.js"></script>
+    <script src="calendar.js"></script>
+</body>
+</html>
+
